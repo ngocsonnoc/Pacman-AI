@@ -177,9 +177,34 @@ var OBJECT_TYPE = {
 
 exports.OBJECT_TYPE = OBJECT_TYPE;
 var CLASS_LIST = [OBJECT_TYPE.BLANK, OBJECT_TYPE.WALL, OBJECT_TYPE.DOT, OBJECT_TYPE.BLINKY, OBJECT_TYPE.PINKY, OBJECT_TYPE.INKY, OBJECT_TYPE.CLYDE, OBJECT_TYPE.PILL, OBJECT_TYPE.PACMAN, OBJECT_TYPE.GHOSTLAIR]; // 1- wall 2-dot
+// export const LEVEL = [
+//   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+//   1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1,
+//   1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1,
+//   1, 7, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 7, 1,
+//   1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1,
+//   1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1,
+//   1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1,
+//   1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1,
+//   0, 0, 0, 0, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 0, 0, 0, 0,
+//   0, 0, 0, 0, 2, 1, 2, 1, 9, 9, 9, 9, 1, 2, 1, 2, 0, 0, 0, 0,
+//   1, 1, 1, 1, 2, 1, 2, 1, 9, 9, 9, 9, 1, 2, 1, 2, 1, 1, 1, 1,
+//   1, 0, 0, 0, 2, 2, 2, 1, 9, 9, 9, 9, 1, 2, 2, 2, 0, 0, 0, 1,
+//   1, 1, 1, 1, 2, 1, 2, 1, 9, 9, 9, 9, 1, 2, 1, 2, 1, 1, 1, 1,
+//   0, 0, 0, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 0, 0, 0,
+//   0, 0, 0, 1, 2, 1, 2, 0, 0, 0, 0, 0, 0, 2, 1, 2, 1, 0, 0, 0,
+//   1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1,
+//   1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1,
+//   1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1,
+//   1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1,
+//   1, 7, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 7, 1,
+//   1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1,
+//   1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1,
+//   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+// ];
 
 exports.CLASS_LIST = CLASS_LIST;
-var LEVEL = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 7, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 7, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 0, 0, 0, 0, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 2, 1, 9, 9, 9, 9, 1, 2, 1, 2, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 2, 1, 9, 9, 9, 9, 1, 2, 1, 2, 1, 1, 1, 1, 1, 0, 0, 0, 2, 2, 2, 1, 9, 9, 9, 9, 1, 2, 2, 2, 0, 0, 0, 1, 1, 1, 1, 1, 2, 1, 2, 1, 9, 9, 9, 9, 1, 2, 1, 2, 1, 1, 1, 1, 0, 0, 0, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 0, 0, 0, 0, 0, 0, 1, 2, 1, 2, 0, 0, 0, 0, 0, 0, 2, 1, 2, 1, 0, 0, 0, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 7, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 7, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; // export const LEVEL = [
+var LEVEL = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 7, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 7, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 2, 0, 0, 2, 2, 2, 2, 0, 2, 2, 2, 0, 0, 2, 2, 2, 0, 2, 2, 2, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 9, 9, 9, 9, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 9, 9, 9, 9, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 9, 9, 9, 9, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 9, 9, 9, 9, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 2, 2, 2, 0, 2, 2, 2, 0, 0, 2, 2, 2, 0, 2, 2, 2, 2, 0, 0, 2, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 7, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 7, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // export const LEVEL = [
 //   2, 2, 2,
 //   2, 2, 2,
 //   2, 2, 2,
@@ -513,7 +538,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.randomMovement = randomMovement;
-exports.AIGo = AIGo;
+exports.AMovement = AMovement;
 
 var _setup = require("./setup");
 
@@ -521,7 +546,7 @@ var _setup = require("./setup");
 function randomMovement(position, direction, objectExist) {
   var dir = direction;
   var nextMovePos = position + dir.movement;
-  var keys = Object.keys(_setup.DIRECTIONS);
+  var keys = Object.keys(_setup.DIRECTIONS); //['ArrowLeft', 'ArrowUp', 'ArrowRight', 'ArrowDown']
 
   while (objectExist(nextMovePos, _setup.OBJECT_TYPE.WALL) || objectExist(nextMovePos, _setup.OBJECT_TYPE.GHOST)) {
     var key = keys[Math.floor(Math.random() * keys.length)]; //0-3
@@ -547,45 +572,55 @@ var getToaDo = function getToaDo(pos) {
   };
 };
 
-var getDistance = function getDistance(pac, gho) {
-  var pacman = getToaDo(pac);
-  var ghost = getToaDo(gho);
-  return Math.sqrt((pacman.x - ghost.x) * (pacman.x - ghost.x) + (pacman.y - ghost.y) * (pacman.y - ghost.y));
-};
-
-function AIGo(position, direction, objectExist) {
-  var dir = direction;
-  var nextMovePos = position + dir.movement;
+function AMovement(position, direction, objectExist) {
   var pacman = localStorage.getItem('pacman');
-  var keys = Object.keys(_setup.DIRECTIONS);
-  var n = 3;
+  var toaDoGhost = getToaDo(position);
+  var toaDoPacman = getToaDo(pacman);
+  var dir = direction;
+  var keys = [];
+
+  if (toaDoGhost.x > toaDoPacman.x) {
+    keys.push('ArrowLeft');
+  } else if (toaDoGhost.x < toaDoPacman.x) {
+    keys.push('ArrowRight');
+  } else {
+    if (toaDoGhost.y > toaDoPacman.y) {
+      keys.push('ArrowDown');
+    } else {
+      keys.push('ArrowUp');
+    }
+  }
+
+  if (toaDoGhost.y > toaDoPacman.y) {
+    keys.push('ArrowDown');
+  } else {
+    keys.push('ArrowUp');
+  }
+
+  if (toaDoGhost.y > toaDoPacman.y) {
+    keys.push('ArrowDown');
+  } else if (toaDoGhost.y === toaDoGhost.x) {
+    if (toaDoGhost.x > toaDoPacman.x) {
+      keys.push('ArrowLeft');
+    } else {
+      keys.push('ArrowRight');
+    }
+  }
+
+  var key = keys[Math.floor(Math.random() * keys.length)]; //0-3
+  // set next move
+
+  dir = _setup.DIRECTIONS[key]; //set the next move
+
+  var nextMovePos = position + dir.movement;
 
   while (objectExist(nextMovePos, _setup.OBJECT_TYPE.WALL) || objectExist(nextMovePos, _setup.OBJECT_TYPE.GHOST)) {
-    if (!pacman) {
-      var key = keys[Math.floor(Math.random() * keys.length)]; //0-3
+    var _key = keys[Math.floor(Math.random() * keys.length)]; //0-3
+    // set next move
 
-      dir = _setup.DIRECTIONS[key];
-      nextMovePos = position + dir.movement;
-    } else {
-      var initDistance = getDistance(position, pacman);
-      console.log('initDistance', initDistance);
+    dir = _setup.DIRECTIONS[_key]; //set the next move
 
-      while (n >= 0) {
-        var k = keys[n];
-        console.log(n);
-        console.log(_setup.DIRECTIONS.ArrowUp.movement);
-        var distance = getDistance(pacman, position + _setup.DIRECTIONS.k.movement);
-
-        if (distance < initDistance) {
-          console.log('new:', distance);
-        }
-
-        n--;
-      }
-
-      dir = _setup.DIRECTIONS[n];
-      nextMovePos = position + dir.movement;
-    }
+    nextMovePos = position + dir.movement;
   }
 
   return {
@@ -814,17 +849,16 @@ function startGame() {
   score = 0;
   startButton.classList.add('hide');
   gameBoard.createGrid(_setup.LEVEL);
-  var pacman = new _Pacman.default(50, 0); // speed 2 vi tri 287
+  var pacman = new _Pacman.default(50, 287); // speed 2 vi tri 287
 
-  gameBoard.addObject(0, [_setup.OBJECT_TYPE.PACMAN]); // dat pacman o vi tri 287
+  gameBoard.addObject(287, [_setup.OBJECT_TYPE.PACMAN]); // dat pacman o vi tri 287
 
   document.addEventListener('keydown', function (e) {
     return pacman.handleKeyInput(e, gameBoard.objectExist.bind(gameBoard));
   }); // add ghost
 
-  var ghosts = [new _Ghost.default(300, 6, _GhostMove.randomMovement, _setup.OBJECT_TYPE.BLINKY) // new Ghost(300, 209, AIGo, OBJECT_TYPE.INKY),
-  // new Ghost(250, 230, randomMovement, OBJECT_TYPE.CLYDE),
-  // new Ghost(270, 251, randomMovement, OBJECT_TYPE.PINKY)
+  var ghosts = [new _Ghost.default(100, 209, _GhostMove.AMovement, _setup.OBJECT_TYPE.BLINKY), // new Ghost(300, 209, AIGo, OBJECT_TYPE.INKY),
+  new _Ghost.default(200, 230, _GhostMove.AMovement, _setup.OBJECT_TYPE.CLYDE) // new Ghost(270, 251, AMovement, OBJECT_TYPE.PINKY)
   ];
   timer = setInterval(function () {
     gameLoop(pacman, ghosts), GLOBAL_SPEED;
@@ -861,7 +895,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60131" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61836" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

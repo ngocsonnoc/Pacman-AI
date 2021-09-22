@@ -1,7 +1,7 @@
 import { DIRECTIONS, LEVEL, OBJECT_TYPE } from "./setup";
 import GameBoard from "./GameBoard";
 import Pacman from "./Pacman";
-import { randomMovement,AIGo } from "./GhostMove";
+import { randomMovement,AMovement } from "./GhostMove";
 import Ghost from "./Ghost";
 import soundDot from './sounds/munch.wav'
 import soundPill from './sounds/pill.wav'
@@ -111,18 +111,18 @@ function startGame() {
     score = 0
     startButton.classList.add('hide')
     gameBoard.createGrid(LEVEL)
-    const pacman = new Pacman(50, 0)// speed 2 vi tri 287
-    gameBoard.addObject(0, [OBJECT_TYPE.PACMAN]);// dat pacman o vi tri 287
+    const pacman = new Pacman(50, 287)// speed 2 vi tri 287
+    gameBoard.addObject(287, [OBJECT_TYPE.PACMAN]);// dat pacman o vi tri 287
     document.addEventListener('keydown', (e) =>
         pacman.handleKeyInput(e, gameBoard.objectExist.bind(gameBoard))
     )
-   
+
     // add ghost
     const ghosts = [
-        new Ghost(300, 6, randomMovement, OBJECT_TYPE.BLINKY),
+        new Ghost(100, 209,AMovement , OBJECT_TYPE.BLINKY),
         // new Ghost(300, 209, AIGo, OBJECT_TYPE.INKY),
-        // new Ghost(250, 230, randomMovement, OBJECT_TYPE.CLYDE),
-        // new Ghost(270, 251, randomMovement, OBJECT_TYPE.PINKY)
+         new Ghost(200, 230, AMovement, OBJECT_TYPE.CLYDE),
+        // new Ghost(270, 251, AMovement, OBJECT_TYPE.PINKY)
     ]
 
     timer = setInterval(() => {
