@@ -177,6 +177,33 @@ var OBJECT_TYPE = {
 
 exports.OBJECT_TYPE = OBJECT_TYPE;
 var CLASS_LIST = [OBJECT_TYPE.BLANK, OBJECT_TYPE.WALL, OBJECT_TYPE.DOT, OBJECT_TYPE.BLINKY, OBJECT_TYPE.PINKY, OBJECT_TYPE.INKY, OBJECT_TYPE.CLYDE, OBJECT_TYPE.PILL, OBJECT_TYPE.PACMAN, OBJECT_TYPE.GHOSTLAIR]; // 1- wall 2-dot
+
+exports.CLASS_LIST = CLASS_LIST;
+var LEVEL = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 7, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 7, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 0, 0, 0, 0, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 2, 0, 9, 9, 9, 9, 0, 2, 1, 2, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 2, 0, 9, 9, 9, 9, 0, 2, 1, 2, 1, 1, 1, 1, 0, 0, 0, 0, 2, 2, 2, 0, 9, 9, 9, 9, 0, 2, 2, 2, 0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 2, 0, 9, 9, 9, 9, 0, 2, 1, 2, 1, 1, 1, 1, 0, 0, 0, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 0, 0, 0, 0, 0, 0, 1, 2, 1, 2, 0, 0, 0, 0, 0, 0, 2, 1, 2, 1, 0, 0, 0, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 7, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 7, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; // export const LEVEL = [
+//   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+//   0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0,
+//   0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0,
+//   0, 7, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 7, 0,
+//   0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0,
+//   0, 2, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 2, 0,
+//   0, 2, 2, 2, 2, 0, 2, 2, 2, 0, 0, 2, 2, 2, 0, 2, 2, 2, 2, 0,
+//   0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0,
+//   0, 0, 0, 0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 0, 0, 0,
+//   0, 0, 0, 0, 2, 0, 2, 0, 9, 9, 9, 9, 0, 2, 0, 2, 0, 0, 0, 0,
+//   0, 0, 0, 0, 2, 0, 2, 0, 9, 9, 9, 9, 0, 2, 0, 2, 0, 0, 0, 0,
+//   0, 0, 0, 0, 2, 2, 2, 0, 9, 9, 9, 9, 0, 2, 2, 2, 0, 0, 0, 0,
+//   0, 0, 0, 0, 2, 0, 2, 0, 9, 9, 9, 9, 0, 2, 0, 2, 0, 0, 0, 0,
+//   0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0,
+//   0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0,
+//   0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0,
+//   0, 2, 2, 2, 2, 0, 2, 2, 2, 0, 0, 2, 2, 2, 0, 2, 2, 2, 2, 0,
+//   0, 2, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 2, 0,
+//   0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0,
+//   0, 7, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 7, 0,
+//   0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0,
+//   0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0,
+//   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+// ];
 // export const LEVEL = [
 //   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 //   1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1,
@@ -187,10 +214,10 @@ var CLASS_LIST = [OBJECT_TYPE.BLANK, OBJECT_TYPE.WALL, OBJECT_TYPE.DOT, OBJECT_T
 //   1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1,
 //   1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1,
 //   0, 0, 0, 0, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 0, 0, 0, 0,
-//   0, 0, 0, 0, 2, 1, 2, 1, 9, 9, 9, 9, 1, 2, 1, 2, 0, 0, 0, 0,
-//   1, 1, 1, 1, 2, 1, 2, 1, 9, 9, 9, 9, 1, 2, 1, 2, 1, 1, 1, 1,
-//   1, 0, 0, 0, 2, 2, 2, 1, 9, 9, 9, 9, 1, 2, 2, 2, 0, 0, 0, 1,
-//   1, 1, 1, 1, 2, 1, 2, 1, 9, 9, 9, 9, 1, 2, 1, 2, 1, 1, 1, 1,
+//   0, 0, 0, 0, 2, 1, 2, 0, 9, 9, 9, 9, 0, 2, 1, 2, 0, 0, 0, 0,
+//   1, 1, 1, 1, 2, 1, 2, 0, 9, 9, 9, 9, 0, 2, 1, 2, 1, 1, 1, 1,
+//   1, 0, 0, 0, 2, 2, 2, 0, 9, 9, 9, 9, 0, 2, 2, 2, 0, 0, 0, 1,
+//   1, 1, 1, 1, 2, 1, 2, 0, 9, 9, 9, 9, 0, 2, 1, 2, 1, 1, 1, 1,
 //   0, 0, 0, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 0, 0, 0,
 //   0, 0, 0, 1, 2, 1, 2, 0, 0, 0, 0, 0, 0, 2, 1, 2, 1, 0, 0, 0,
 //   1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1,
@@ -202,9 +229,7 @@ var CLASS_LIST = [OBJECT_TYPE.BLANK, OBJECT_TYPE.WALL, OBJECT_TYPE.DOT, OBJECT_T
 //   1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1,
 //   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 // ];
-
-exports.CLASS_LIST = CLASS_LIST;
-var LEVEL = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 7, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 7, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 2, 0, 0, 2, 2, 2, 2, 0, 2, 2, 2, 0, 0, 2, 2, 2, 0, 2, 2, 2, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 9, 9, 9, 9, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 9, 9, 9, 9, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 9, 9, 9, 9, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 9, 9, 9, 9, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 2, 2, 2, 0, 2, 2, 2, 0, 0, 2, 2, 2, 0, 2, 2, 2, 2, 0, 0, 2, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 7, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 7, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // export const LEVEL = [
+// export const LEVEL = [
 //   2, 2, 2,
 //   2, 2, 2,
 //   2, 2, 2,
@@ -539,13 +564,20 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.randomMovement = randomMovement;
 exports.AMovement = AMovement;
+exports.AStarMovement = AStarMovement;
 
 var _setup = require("./setup");
 
 /// primitive random movement
+// get distance 
+function getDistance(a, b) {
+  return Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
+}
+
 function randomMovement(position, direction, objectExist) {
   var dir = direction;
   var nextMovePos = position + dir.movement;
+  console.log(dir);
   var keys = Object.keys(_setup.DIRECTIONS); //['ArrowLeft', 'ArrowUp', 'ArrowRight', 'ArrowDown']
 
   while (objectExist(nextMovePos, _setup.OBJECT_TYPE.WALL) || objectExist(nextMovePos, _setup.OBJECT_TYPE.GHOST)) {
@@ -574,40 +606,73 @@ var getToaDo = function getToaDo(pos) {
 
 function AMovement(position, direction, objectExist) {
   var pacman = localStorage.getItem('pacman');
+  var powerPill = localStorage.getItem('powerPill');
   var toaDoGhost = getToaDo(position);
   var toaDoPacman = getToaDo(pacman);
   var dir = direction;
   var keys = [];
 
-  if (toaDoGhost.x > toaDoPacman.x) {
-    keys.push('ArrowLeft');
-  } else if (toaDoGhost.x < toaDoPacman.x) {
-    keys.push('ArrowRight');
-  } else {
+  if (!powerPill) {
+    if (toaDoGhost.x > toaDoPacman.x) {
+      keys.push('ArrowLeft');
+    } else if (toaDoGhost.x < toaDoPacman.x) {
+      keys.push('ArrowRight');
+    } else {
+      if (toaDoGhost.y > toaDoPacman.y) {
+        keys.push('ArrowDown');
+      } else {
+        keys.push('ArrowUp');
+      }
+    }
+
     if (toaDoGhost.y > toaDoPacman.y) {
       keys.push('ArrowDown');
     } else {
       keys.push('ArrowUp');
     }
-  }
 
-  if (toaDoGhost.y > toaDoPacman.y) {
-    keys.push('ArrowDown');
-  } else {
-    keys.push('ArrowUp');
-  }
-
-  if (toaDoGhost.y > toaDoPacman.y) {
-    keys.push('ArrowDown');
-  } else if (toaDoGhost.y === toaDoGhost.x) {
-    if (toaDoGhost.x > toaDoPacman.x) {
-      keys.push('ArrowLeft');
-    } else {
-      keys.push('ArrowRight');
+    if (toaDoGhost.y > toaDoPacman.y) {
+      keys.push('ArrowDown');
+    } else if (toaDoGhost.y === toaDoGhost.x) {
+      if (toaDoGhost.x > toaDoPacman.x) {
+        keys.push('ArrowLeft');
+      } else {
+        keys.push('ArrowRight');
+      }
     }
   }
 
-  var key = keys[Math.floor(Math.random() * keys.length)]; //0-3
+  if (powerPill) {
+    if (toaDoGhost.x > toaDoPacman.x) {
+      keys.push('ArrowRight');
+    } else if (toaDoGhost.x < toaDoPacman.x) {
+      keys.push('ArrowLeft');
+    } else {
+      if (toaDoGhost.y > toaDoPacman.y) {
+        keys.push('ArrowUp');
+      } else {
+        keys.push('ArrowDown');
+      }
+    }
+
+    if (toaDoGhost.y > toaDoPacman.y) {
+      keys.push('ArrowUp');
+    } else {
+      keys.push('ArrowDown');
+    }
+
+    if (toaDoGhost.y > toaDoPacman.y) {
+      keys.push('ArrowUp');
+    } else if (toaDoGhost.y === toaDoGhost.x) {
+      if (toaDoGhost.x > toaDoPacman.x) {
+        keys.push('ArrowRight');
+      } else {
+        keys.push('ArrowLeft');
+      }
+    }
+  }
+
+  var key = keys[0]; //0-3
   // set next move
 
   dir = _setup.DIRECTIONS[key]; //set the next move
@@ -615,7 +680,10 @@ function AMovement(position, direction, objectExist) {
   var nextMovePos = position + dir.movement;
 
   while (objectExist(nextMovePos, _setup.OBJECT_TYPE.WALL) || objectExist(nextMovePos, _setup.OBJECT_TYPE.GHOST)) {
-    var _key = keys[Math.floor(Math.random() * keys.length)]; //0-3
+    var key2 = Object.keys(_setup.DIRECTIONS);
+    key2.push('ArrowRight', 'ArrowRight', 'ArrowRight', 'ArrowUp', 'ArrowUp', 'ArrowUp'); // let index = arr.findIndex(dir)
+
+    var _key = key2[Math.floor(Math.random() * key2.length)]; //0-3
     // set next move
 
     dir = _setup.DIRECTIONS[_key]; //set the next move
@@ -623,6 +691,105 @@ function AMovement(position, direction, objectExist) {
     nextMovePos = position + dir.movement;
   }
 
+  return {
+    nextMovePos: nextMovePos,
+    direction: dir
+  };
+}
+
+function getKeyFromMove(move) {
+  switch (move) {
+    case 1:
+      return 'ArrowLeft';
+
+    case -1:
+      return 'ArrowRight';
+
+    case 20:
+      return 'ArrowDown';
+
+    case -20:
+      return 'ArrowUp';
+      break;
+  }
+}
+
+function removeFromArray(arr, cur) {
+  for (var i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] === cur) {
+      arr.splice(i, 1);
+      return arr;
+    }
+  }
+}
+
+function AStarMovement(position, direction, objectExist) {
+  var pacman = localStorage.getItem('pacman');
+  var powerPill = localStorage.getItem('powerPill');
+  var toaDoGhost = getToaDo(position);
+  var toaDoPacman = getToaDo(pacman);
+  var dir = direction;
+  var nextMovePos = position + dir.movement;
+  var comeFrom = direction;
+  var keys = [];
+  var cameFrom = getKeyFromMove(direction.movement); //    if(isInArr(toaDoGhost.x,pushArr(0,19)) ){
+  //    }
+
+  if (toaDoGhost.x !== 0) {
+    if (objectExist(position - 1, _setup.OBJECT_TYPE.WALL) === false && objectExist(position - 1, _setup.OBJECT_TYPE.GHOST) === false) {
+      if (cameFrom !== 'ArrowLeft') {
+        keys.push('ArrowLeft');
+      }
+    }
+  }
+
+  if (toaDoGhost.x !== 19) {
+    if (objectExist(position + 1, _setup.OBJECT_TYPE.WALL) === false && objectExist(position + 1, _setup.OBJECT_TYPE.GHOST) === false) {
+      if (cameFrom !== 'ArrowRight') {
+        keys.push('ArrowRight');
+      }
+
+      console.log(cameFrom);
+    }
+  }
+
+  if (toaDoGhost.y !== 0) {
+    if (objectExist(position - 20, _setup.OBJECT_TYPE.WALL) === false && objectExist(position - 20, _setup.OBJECT_TYPE.GHOST) === false && cameFrom !== 'ArrowDown') {
+      keys.push('ArrowUp');
+    }
+  }
+
+  if (toaDoGhost.y !== -420) {
+    if (objectExist(position + 20, _setup.OBJECT_TYPE.WALL) === false && objectExist(position + 20, _setup.OBJECT_TYPE.GHOST) === false && cameFrom !== 'ArrowUp') {
+      keys.push('ArrowDown');
+    }
+  }
+
+  console.log('key:', keys);
+  console.log(getToaDo(position)); // const key1 = Object.keys(DIRECTIONS);//['ArrowLeft', 'ArrowUp', 'ArrowRight', 'ArrowDown']
+
+  var key = keys[0];
+  var index = 0;
+
+  if (keys.length === 1) {
+    index = 0;
+  }
+
+  if (keys.length > 1) {
+    var distance = getDistance(toaDoPacman, getToaDo(position + _setup.DIRECTIONS[keys[0]].movement));
+
+    for (var i = 0; i < keys.length; i++) {
+      if (getDistance(toaDoPacman, getToaDo(position + _setup.DIRECTIONS[keys[i]].movement)) < distance) {
+        distance = getDistance(toaDoPacman, getToaDo(position + _setup.DIRECTIONS[keys[i]].movement));
+        index = i;
+      }
+    }
+  }
+
+  dir = _setup.DIRECTIONS[keys[index]]; //set the next move
+
+  nextMovePos = position + dir.movement;
+  keys = [];
   return {
     nextMovePos: nextMovePos,
     direction: dir
@@ -755,8 +922,8 @@ var gameGrid = document.querySelector('#game');
 var scoreTable = document.querySelector('#score');
 var startButton = document.querySelector('#start-button'); // dinh nghia cac hang so 
 
-var POWER_PILL_TIME = 10000;
-var GLOBAL_SPEED = 80; // ms
+var POWER_PILL_TIME = 5000;
+var GLOBAL_SPEED = 80000; // ms
 
 var gameBoard = _GameBoard.default.createGameBoard(gameGrid, _setup.LEVEL); // setup
 
@@ -817,10 +984,12 @@ function gameLoop(pacman, ghosts) {
     playAudio(_pill.default);
     gameBoard.removeObject(pacman.pos, [_setup.OBJECT_TYPE.PILL]);
     pacman.powerPill = true;
+    localStorage.setItem('powerPill', pacman.powerPill);
     score += 50;
     clearTimeout(powerPillTimer);
     powerPillTimer = setTimeout(function () {
-      return pacman.powerPill = false;
+      pacman.powerPill = false;
+      localStorage.removeItem('powerPill');
     }, POWER_PILL_TIME);
   } // ghost in mode power pill
 
@@ -857,8 +1026,8 @@ function startGame() {
     return pacman.handleKeyInput(e, gameBoard.objectExist.bind(gameBoard));
   }); // add ghost
 
-  var ghosts = [new _Ghost.default(100, 209, _GhostMove.AMovement, _setup.OBJECT_TYPE.BLINKY), // new Ghost(300, 209, AIGo, OBJECT_TYPE.INKY),
-  new _Ghost.default(200, 230, _GhostMove.AMovement, _setup.OBJECT_TYPE.CLYDE) // new Ghost(270, 251, AMovement, OBJECT_TYPE.PINKY)
+  var ghosts = [new _Ghost.default(100, 209, _GhostMove.AMovement, _setup.OBJECT_TYPE.BLINKY), // new Ghost(300, 209, randomMovement, OBJECT_TYPE.INKY),
+  new _Ghost.default(200, 230, _GhostMove.AStarMovement, _setup.OBJECT_TYPE.CLYDE) // new Ghost(270, 251, AMovement, OBJECT_TYPE.PINKY)
   ];
   timer = setInterval(function () {
     gameLoop(pacman, ghosts), GLOBAL_SPEED;
@@ -895,7 +1064,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61836" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50928" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

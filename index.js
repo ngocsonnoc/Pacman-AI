@@ -1,7 +1,7 @@
 import { DIRECTIONS, LEVEL, OBJECT_TYPE } from "./setup";
 import GameBoard from "./GameBoard";
 import Pacman from "./Pacman";
-import { randomMovement,AMovement } from "./GhostMove";
+import { randomMovement, AMovement,AStarMovement } from "./GhostMove";
 import Ghost from "./Ghost";
 import soundDot from './sounds/munch.wav'
 import soundPill from './sounds/pill.wav'
@@ -20,8 +20,8 @@ const startButton = document.querySelector('#start-button')
 
 
 // dinh nghia cac hang so 
-const POWER_PILL_TIME = 10000
-const GLOBAL_SPEED = 80 // ms
+const POWER_PILL_TIME = 5000
+const GLOBAL_SPEED = 80000 // ms
 const gameBoard = GameBoard.createGameBoard(gameGrid, LEVEL)
 
 // setup
@@ -63,12 +63,12 @@ function checkCollision(pacman, ghosts) {
 }
 
 function gameLoop(pacman, ghosts) {
-    localStorage.setItem('pacman',pacman.pos)
+    localStorage.setItem('pacman', pacman.pos)
     gameBoard.moveCharacter(pacman)
     checkCollision(pacman, ghosts)
     ghosts.forEach(ghost => gameBoard.moveCharacter(ghost))
     checkCollision(pacman, ghosts)
-   
+
     // kiem tra pacman an diem
 
     if (gameBoard.objectExist(pacman.pos, OBJECT_TYPE.DOT)) {
@@ -82,9 +82,13 @@ function gameLoop(pacman, ghosts) {
         playAudio(soundPill)
         gameBoard.removeObject(pacman.pos, [OBJECT_TYPE.PILL])
         pacman.powerPill = true
+        localStorage.setItem('powerPill', pacman.powerPill)
         score += 50
         clearTimeout(powerPillTimer)
-        powerPillTimer = setTimeout(() => (pacman.powerPill = false),
+        powerPillTimer = setTimeout(() => {
+            pacman.powerPill = false
+            localStorage.removeItem('powerPill')
+        },
             POWER_PILL_TIME)
 
     }
@@ -119,9 +123,9 @@ function startGame() {
 
     // add ghost
     const ghosts = [
-        new Ghost(100, 209,AMovement , OBJECT_TYPE.BLINKY),
-        // new Ghost(300, 209, AIGo, OBJECT_TYPE.INKY),
-         new Ghost(200, 230, AMovement, OBJECT_TYPE.CLYDE),
+        new Ghost(100, 209, AMovement, OBJECT_TYPE.BLINKY),
+        // new Ghost(300, 209, randomMovement, OBJECT_TYPE.INKY),
+        new Ghost(200, 230, AStarMovement, OBJECT_TYPE.CLYDE),
         // new Ghost(270, 251, AMovement, OBJECT_TYPE.PINKY)
     ]
 
